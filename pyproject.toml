@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "openllm-messaging"
+version = "0.0.1"
+description = ""
+authors = ["Tobias Waslowski <tobiaswaslowski@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

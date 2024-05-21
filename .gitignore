@@ -1,0 +1,8 @@
+.env
+.envrc
+.idea
+__pycache__
+
+requirements.txt
+htmlcov/
+.coverage
