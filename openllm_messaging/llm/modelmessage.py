@@ -12,4 +12,7 @@ class Role(Enum):
 class ModelMessage:
     role: Role
     content: str
-    tokens: int
+    tokens: int | None = None
+
+    def as_dict(self):
+        return {"role": self.role.name, "content": self.content, "tokens": self.tokens}

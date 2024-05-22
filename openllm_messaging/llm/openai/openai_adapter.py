@@ -10,7 +10,20 @@ class OpenAIAdapter:
     def __init__(self, api_key: str):
         self.client = OpenAI(api_key=api_key)
 
-    async def text(self, messages: list[ModelMessage]) -> ModelMessage:
+    def chat_completion_simple(self, prompt: str) -> ModelMessage:
+        """
+        Helper function for prototyping. Instead of having to go through the process of creating a
+        list of ModelMessages with a System Prompt, this provides a simple way to get a response.
+        :param prompt: a simple prompt.
+        :return: The model response as a ModelMessage.
+        """
+        system_prompt = ModelMessage(
+            content="You are a useful assistant.", role=Role.SYSTEM
+        )
+        user_prompt = ModelMessage(content=prompt, role=Role.USER)
+        return self.chat_completion([system_prompt, user_prompt])
+
+    def chat_completion(self, messages: list[ModelMessage]) -> ModelMessage:
         """
 
         :param messages: A list of ModelMessages, containing a system prompt and a user prompt
@@ -19,7 +32,6 @@ class OpenAIAdapter:
         logging.info(f"Sending messages to OpenAI API: {messages}")
         completion = self.client.chat.completions.create(
             model="gpt-4o",
-            response_format={"type": "json_object"},
             messages=[self._openai_api_format(message) for message in messages],
         )
         content = completion.choices[0].message.content
