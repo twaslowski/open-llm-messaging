@@ -1,9 +1,89 @@
-<mxfile host="app.diagrams.net" modified="2024-05-22T08:47:37.999Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15" version="24.4.4" etag="xStJkwHwGnt99l5BMdlB" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-22T09:02:32.599Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15" etag="sIXORDhaoDZhxoS3vd7y" version="24.4.4" type="github">
   <diagram name="Page-1" id="fjdlz_aVAt7LVahYPMCF">
-    <mxGraphModel>
+    <mxGraphModel dx="995" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-1" target="VtiaSz6yJbyNicxg5vJs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-8" value="polling" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VtiaSz6yJbyNicxg5vJs-7">
+          <mxGeometry y="3" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-1" target="VtiaSz6yJbyNicxg5vJs-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-14" value="HTTP Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VtiaSz6yJbyNicxg5vJs-13">
+          <mxGeometry x="0.0932" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-1" target="VtiaSz6yJbyNicxg5vJs-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-1" target="VtiaSz6yJbyNicxg5vJs-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-1" value="Telegram bot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="248" y="250" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/docker-128.png" vertex="1" parent="1">
+          <mxGeometry x="413" y="220" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-4" value="Telegram API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-10" target="VtiaSz6yJbyNicxg5vJs-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-16" value="HTTP Response (Streaming)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VtiaSz6yJbyNicxg5vJs-15">
+          <mxGeometry x="0.3341" y="2" relative="1" as="geometry">
+            <mxPoint x="51" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-10" value="OpenAI Adapter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="250" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-17" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/docker-128.png" vertex="1" parent="1">
+          <mxGeometry x="840" y="220" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-18" target="VtiaSz6yJbyNicxg5vJs-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-18" value="Potential middle layer for routing requests" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="490" y="380" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-21" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Key ideas:&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;- Bots and LLM adapters are decoupled and communicate via HTTP. This enables rapid prototyping for different messaging clients such as Discord, Telegram and the Meta messengers. It also enables different runtimes in the future, as certain bots could be hosted in serverless environments when sensible.&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;- It is important that when building with Python, the different bots are decoupled and do not run as one application. Python does not do multithreading well, so running polling and handling requests for different messaging apps in one application begs for trouble down the line.&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;- A middle layer could be introduced in the future for providing a unified interface for fetching user configuration, performing authentication etc.; it could also serve the purpose of routing requests between different LLM backends.&lt;/blockquote&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="860" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-22" target="VtiaSz6yJbyNicxg5vJs-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-22" target="VtiaSz6yJbyNicxg5vJs-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-22" value="Discord bot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="248" y="480" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VtiaSz6yJbyNicxg5vJs-24" target="VtiaSz6yJbyNicxg5vJs-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-27" value="push??" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VtiaSz6yJbyNicxg5vJs-26">
+          <mxGeometry x="0.047" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-24" value="Telegram API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="480" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-30" value="HTTP routing config (i.e. domain, API tokens for API Gateway etc.)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="370" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VtiaSz6yJbyNicxg5vJs-31" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/integration/App_Configuration.svg;" vertex="1" parent="1">
+          <mxGeometry x="280" y="350" width="45.18" height="48" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
