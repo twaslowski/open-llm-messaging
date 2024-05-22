@@ -19,8 +19,8 @@ repos:
 
   - repo: local
     hooks:
-      - id: backend-test
-        name: backend-test
+      - id: test
+        name: test
         entry: bash -c "poetry run pytest test/"
         language: python
         pass_filenames: false
