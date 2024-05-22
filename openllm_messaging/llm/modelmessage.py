@@ -9,7 +9,7 @@ class Role(Enum):
 
 
 @dataclass
-class Message:
+class ModelMessage:
     role: Role
     content: str
     tokens: int
