@@ -2,8 +2,8 @@ import logging
 
 from openai import OpenAI
 
-from openllm_messaging.llm.modelmessage import ModelMessage
-from openllm_messaging.llm.modelmessage import Role
+from openllm_messaging.llm.model_message import ModelMessage
+from openllm_messaging.llm.model_message import Role
 
 
 class OpenAIAdapter:
@@ -25,7 +25,6 @@ class OpenAIAdapter:
 
     def chat_completion(self, messages: list[ModelMessage]) -> ModelMessage:
         """
-
         :param messages: A list of ModelMessages, containing a system prompt and a user prompt
         :return: the response message object
         """
@@ -46,7 +45,7 @@ class OpenAIAdapter:
         :param message: a single ModelMessage object to transform
         :return: the resulting dictionary
         """
-        return {"content": message.content, "role": str(message.role.name.lower())}
+        return {"content": message.content, "role": str(message.role.value)}
 
     async def vision(self):
         # https://platform.openai.com/docs/guides/vision
