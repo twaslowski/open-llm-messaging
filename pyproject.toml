@@ -15,6 +15,9 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
+coverage-badge = "^1.1.1"
+pytest-cov = "4.1.0"
+setuptools = "^70.0.0"
 
 [tool.poetry.group.telegram]
 optional = true
@@ -36,3 +39,9 @@ openai = "openllm_messaging.openai_server:run"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-s -v --disable-warnings"
+testpaths = [
+    "test",
+]
