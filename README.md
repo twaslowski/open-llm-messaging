@@ -44,3 +44,7 @@ Gaining a user base will be crucial to gather user feedback as quickly as possib
 
 At the same time, the integration of LLMs will be expanded. Initially, I will use GPT-4o, but I would like to add
 the option to use self-hosted LLMs relatively quickly to achieve the promised higher degree of privacy.
+
+You can find a rough architectural sketch here:
+
+![Architecture](./openllm-messaging.drawio.svg)
