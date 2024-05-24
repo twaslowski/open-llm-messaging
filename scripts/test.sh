@@ -23,7 +23,7 @@ else
   echo "no virtual environment found. assuming dependencies are available."
 fi
 
-poetry run coverage run -m pytest
+poetry run coverage run --source openllm_messaging -m pytest
 poetry run coverage html
 poetry run coverage xml -o test/coverage.xml
 poetry run coverage-badge -f -o test/coverage.svg
