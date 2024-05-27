@@ -18,7 +18,9 @@ class TelegramBot:
     def initialize_application(self) -> Application:
         token = os.environ.get("TELEGRAM_TOKEN")
         app = ApplicationBuilder().token(token).build()
-        app.add_handler(MessageHandler(filters=Filters.PHOTO, callback=self.handle_image))
+        app.add_handler(
+            MessageHandler(filters=Filters.PHOTO, callback=self.handle_image)
+        )
         app.add_handler(MessageHandler(filters=None, callback=self.handle_text))
         logging.info("Starting application ...")
         return app
@@ -43,7 +45,11 @@ class TelegramBot:
         path = await self._download_image(update)
         with open(path, "rb") as image_file:
             image_data = base64.b64encode(image_file.read()).decode("utf-8")
-            backend_response = requests.post(f"{self.llm_backend}/image", json={"image": image_data})
+            backend_response = requests.post(
+                f"{self.llm_backend}/image", json={"image": image_data}
+            )
+            message = ModelMessage(**backend_response.json())
+            await update.message.reply_text(self.format_response(message))
 
     @staticmethod
     async def _download_image(update: Update) -> str:
@@ -53,9 +59,11 @@ class TelegramBot:
         :return:
         """
         photo = update.message.photo[-1]
-        logging.info(f"Received image from {update.effective_user.id}: {update.message.photo[-1].file_id}")
+        logging.info(
+            f"Received image from {update.effective_user.id}: {update.message.photo[-1].file_id}"
+        )
         image = await photo.get_file()
-        filename = f'tmp/{update.effective_user.id}_{photo.file_id}.jpeg'
+        filename = f"tmp/{update.effective_user.id}_{photo.file_id}.jpeg"
         await image.download_to_drive(filename)
         return filename
 

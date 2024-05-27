@@ -47,9 +47,35 @@ class OpenAIAdapter:
         """
         return {"content": message.content, "role": str(message.role.value)}
 
-    async def vision(self):
-        # https://platform.openai.com/docs/guides/vision
-        pass
+    def vision(self, image: str, prompt: str):
+        """
+        Multi-modal completion using the OpenAI API.
+        :param image: base64-encoded image
+        :param prompt: prompt to send to the model to get information about the image
+        :return:
+        """
+        completion = self.client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": f"{prompt}"},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{image}"  # noqa
+                            },
+                        },
+                    ],
+                }
+            ],
+            max_tokens=100,
+        )
+        content = completion.choices[0].message.content
+        total_tokens = completion.usage.total_tokens
+        logging.info(f"Received raw response: {content}")
+        return ModelMessage(content=content, tokens=total_tokens, role=Role.ASSISTANT)
 
     async def audio(self):
         # may have to use whisper until the gpt-4o API supports audio natively

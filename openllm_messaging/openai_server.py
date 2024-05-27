@@ -8,7 +8,9 @@ from openllm_messaging.llm.openai.openai_adapter import OpenAIAdapter
 app = Flask(__name__)
 key = os.getenv("OPENAI_API_KEY")
 openai_adapter = OpenAIAdapter(key)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 @app.route("/text", methods=["POST"])
@@ -22,7 +24,12 @@ def text():
 
 @app.route("/image", methods=["POST"])
 def image():
-    return "Not implemented", 501
+    image = request.json.get("image")
+    # prompt = request.json.get("prompt")
+    prompt = "What's in this image?"
+    openai_repsonse = openai_adapter.vision(image, prompt)
+    logging.info("Responding with: %s", openai_repsonse)
+    return jsonify(openai_repsonse.as_dict())
 
 
 def run():

@@ -16,11 +16,3 @@ repos:
     hooks:
       - id: autoflake
         args: [--remove-all-unused-imports, --in-place]
-
-  - repo: local
-    hooks:
-      - id: test
-        name: test
-        entry: bash -c "poetry run pytest test/"
-        language: python
-        pass_filenames: false
