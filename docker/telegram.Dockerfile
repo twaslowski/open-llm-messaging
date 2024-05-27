@@ -15,6 +15,9 @@ COPY pyproject.toml poetry.lock ./
 # Required for Poetry
 COPY README.md ./
 
+# Create temporary directory to download media
+RUN mkdir -p /app/tmp
+
 RUN poetry install --with telegram
 
 CMD ["poetry", "run", "telegram"]
