@@ -33,7 +33,7 @@ openai = "^1.30.1"
 flask = "^3.0.3"
 
 [tool.poetry.scripts]
-telegram = "openllm_messaging.telegram_bot:run"
+telegram = "openllm_messaging.telegram_client:run"
 openai = "openllm_messaging.openai_server:run"
 
 [build-system]

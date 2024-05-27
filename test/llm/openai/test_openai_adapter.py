@@ -2,7 +2,7 @@ import pytest
 from openai import OpenAI
 
 from openllm_messaging.llm.openai.openai_adapter import OpenAIAdapter
-from openllm_messaging.llm.model_message import Role
+from openllm_messaging.shared.model_message import Role
 
 
 @pytest.fixture

@@ -2,8 +2,8 @@ import logging
 
 from openai import OpenAI
 
-from openllm_messaging.llm.model_message import ModelMessage
-from openllm_messaging.llm.model_message import Role
+from openllm_messaging.shared.model_message import ModelMessage
+from openllm_messaging.shared.model_message import Role
 
 
 class OpenAIAdapter:

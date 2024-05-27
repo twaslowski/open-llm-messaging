@@ -1,7 +1,7 @@
 import logging
 
 import click
-from openllm_messaging.messaging.telegram import TelegramBot
+from openllm_messaging.messaging.telegram_client import TelegramBot
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"

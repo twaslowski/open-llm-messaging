@@ -1,6 +1,6 @@
 import pytest
 
-from openllm_messaging.llm.model_message import (
+from openllm_messaging.shared.model_message import (
     ModelMessage,
     Role,
     TOKENS_PLACEHOLDER_VALUE,

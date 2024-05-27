@@ -4,7 +4,7 @@ import os
 import requests
 from telegram.ext import ApplicationBuilder, MessageHandler, Application
 
-from openllm_messaging.llm.model_message import ModelMessage
+from openllm_messaging.shared.model_message import ModelMessage
 
 
 class TelegramBot:
