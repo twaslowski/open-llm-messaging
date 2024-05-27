@@ -1,0 +1,27 @@
+services:
+  telegram_client:
+    image: openllm-messaging-telegram-client
+    build:
+      context: .
+      dockerfile: docker/telegram.Dockerfile
+    container_name: telegram-client
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    networks:
+      - openllm-messaging
+
+  openai_server:
+    image: openllm-messaging-openai-server
+    build:
+      context: .
+      dockerfile: docker/openai.Dockerfile
+    container_name: openai-server
+    hostname: openai-server
+    environment:
+        - OPENAI_API_KEY=${OPENAI_API_KEY}
+    networks:
+      - openllm-messaging
+
+networks:
+  openllm-messaging:
+      driver: bridge

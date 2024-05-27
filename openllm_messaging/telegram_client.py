@@ -13,6 +13,6 @@ def run():
     """
     Run Telegram bot.
     """
-    flask_backend = "http://localhost:5000/text"
-    telegram_bot = TelegramBot(flask_backend)
+    llm_backend = "http://openai-server:5001"
+    telegram_bot = TelegramBot(llm_backend)
     telegram_bot.start()

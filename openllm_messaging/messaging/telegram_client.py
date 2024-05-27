@@ -24,7 +24,7 @@ class TelegramBot:
 
     async def handle_text(self, update, _):
         backend_response = requests.post(
-            self.llm_backend, json={"prompt": update.message.text}
+            f"{self.llm_backend}/text", json={"prompt": update.message.text}
         )
         message = ModelMessage(**backend_response.json())
         await update.message.reply_text(self.format_response(message))
